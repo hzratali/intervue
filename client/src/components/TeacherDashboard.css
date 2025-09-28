@@ -1,0 +1,585 @@
+.teacher-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+.dashboard-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header Section */
+.header-section {
+  padding: 3rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #7765DA;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.poll-icon {
+  font-size: 1rem;
+}
+
+.header-section h1 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Form Section */
+.form-section {
+  padding: 0 2.5rem 2rem;
+}
+
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #feb2b2;
+  font-size: 0.9rem;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.question-input-container {
+  position: relative;
+}
+
+.question-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition: border-color 0.3s;
+}
+
+.question-input:focus {
+  outline: none;
+  border-color: #7765DA;
+  box-shadow: 0 0 0 3px rgba(119, 101, 218, 0.1);
+}
+
+.char-count {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  color: #a0aec0;
+  font-size: 0.8rem;
+}
+
+/* Options Section */
+.options-section {
+  margin-bottom: 2rem;
+}
+
+.options-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  font-weight: 500;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.option-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.option-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: #f8f9fa;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: border-color 0.3s;
+}
+
+.option-input-wrapper:focus-within {
+  border-color: #7765DA;
+}
+
+.option-number {
+  width: 24px;
+  height: 24px;
+  background: #7765DA;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.option-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.5rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+.remove-option {
+  background: #e53e3e;
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.correct-options {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+.radio-option input[type="radio"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #7765DA;
+}
+
+.add-option-btn {
+  background: transparent;
+  color: #7765DA;
+  border: 2px dashed #7765DA;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  width: 100%;
+}
+
+.add-option-btn:hover {
+  background: rgba(119, 101, 218, 0.05);
+}
+
+/* Time Section */
+.time-section {
+  margin-bottom: 2rem;
+}
+
+.time-section label {
+  display: block;
+  color: #4a5568;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.time-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+.time-select:focus {
+  outline: none;
+  border-color: #7765DA;
+}
+
+/* Buttons */
+.ask-question-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #7765DA;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 1.5rem;
+}
+
+.ask-question-btn:hover {
+  background: #6b5ce7;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(119, 101, 218, 0.3);
+}
+
+/* Students Section */
+.students-section {
+  background: #f8f9fa;
+  padding: 2rem 2.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.students-section h3 {
+  color: #2d3748;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.student-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  background: #7765DA;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.student-card span {
+  font-size: 0.9rem;
+  color: #4a5568;
+  text-align: center;
+}
+
+/* Active Poll Styles */
+.active-poll-header {
+  padding: 3rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.active-poll-header h2 {
+  color: #2d3748;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.active-poll-header p {
+  color: #718096;
+}
+
+.poll-status {
+  padding: 0 2.5rem 2rem;
+}
+
+.current-question {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.current-question h3 {
+  color: #4a5568;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.current-question p {
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.poll-options {
+  margin-bottom: 2rem;
+}
+
+.poll-option {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  color: #4a5568;
+}
+
+.poll-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.view-results-btn {
+  flex: 1;
+  padding: 1rem;
+  background: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.view-results-btn:hover {
+  background: #38a169;
+}
+
+.new-poll-btn {
+  flex: 1;
+  padding: 1rem;
+  background: transparent;
+  color: #7765DA;
+  border: 2px solid #7765DA;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.new-poll-btn:hover {
+  background: #7765DA;
+  color: white;
+}
+
+/* Results Styles */
+.results-header {
+  padding: 3rem 2.5rem 2rem;
+  text-align: center;
+}
+
+.results-header h2 {
+  color: #2d3748;
+  font-size: 1.8rem;
+}
+
+.results-content {
+  padding: 0 2.5rem 2rem;
+}
+
+.question-display {
+ 
+  color: black;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  border-color: #9f7aea;
+  border: 2px;
+}
+
+.results-chart {
+  margin-bottom: 2rem;
+}
+
+.result-bar {
+  margin-bottom: 1.5rem;
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.option-text {
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.vote-count {
+  color: #7765DA;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.progress-container {
+  width: 100%;
+  height: 20px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #7765DA, #9f7aea);
+  border-radius: 10px;
+  transition: width 0.8s ease;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #7765DA, #9f7aea); /* Match teacher gradient */
+  border-radius: 10px;
+  transition: width 0.8s ease; /* Match teacher transition */
+}
+
+.results-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.total-responses {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .teacher-dashboard {
+    padding: 1rem;
+  }
+  
+  .dashboard-container {
+    margin: 0;
+  }
+  
+  .header-section,
+  .form-section,
+  .students-section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .option-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .options-header {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .correct-options {
+    justify-content: center;
+  }
+  
+  .poll-actions {
+    flex-direction: column;
+  }
+  
+  .results-footer {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+/* Add this to your existing TeacherDashboard.css */
+
+/* Floating Chat Button */
+.chat-button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 60px;
+  height: 60px;
+  background: #7765DA;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(119, 101, 218, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.chat-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(119, 101, 218, 0.4);
+  background: #6b5ce7;
+}
+
+.chat-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+
+/* Mobile responsiveness for chat button */
+@media (max-width: 768px) {
+  .chat-button {
+    bottom: 1rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+
+}
