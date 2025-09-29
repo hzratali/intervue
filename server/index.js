@@ -11,7 +11,7 @@ const server = http.createServer(app);
 
 const io = socketIo(server, {
   cors: {
-    origin: process.env.CLIENT_URL || ["https://intervue-omega.vercel.app/"],
+    origin: process.env.CLIENT_URL || ["https://intervue-h7f7.vercel.app/"],
     methods: ["GET", "POST"],
     credentials: true
   }
