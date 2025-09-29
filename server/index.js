@@ -18,7 +18,7 @@ const io = socketIo(server, {
 });
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || ["https://intervue-omega.vercel.app/"],
+  origin: process.env.CLIENT_URL || ["https://intervue-h7f7.vercel.app/"],
   credentials: true
 }));
 app.use(express.json());
