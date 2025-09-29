@@ -6,7 +6,7 @@ class SocketService {
   }
 
   connect() {
-    const serverUrl = process.env.REACT_APP_SERVER_URL || 'https://intervue-mswu.vercel.app/';
+    const serverUrl = process.env.REACT_APP_SERVER_URL || 'https://intervue-2-446p.onrender.com/';
     this.socket = io(serverUrl);
     return this.socket;
   }
