@@ -1,4 +1,4 @@
-# Live Polling System
+# Live Polling System => https://intervue-h7f7.vercel.app/
 
 A real-time polling application built for educational environments, enabling teachers to create interactive polls and students to participate in live Q&A sessions with integrated chat functionality.
 
@@ -206,7 +206,7 @@ For production deployment, update the URLs accordingly:
    - Add environment variable: `CLIENT_URL=http://localhost:3000`
 
 2. **Frontend Deployment**:
-   - Deploy to Vercel, or similar platform
+   - Deploy to Vercel
    - Set environment variable: `REACT_APP_SERVER_URL=http://localhost:5000/`
    - Ensure build folder is properly configured
 
